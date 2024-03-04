@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zatti | CONTATO</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Zatti</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tabela.html">Tabela</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+                <li><a href="fonte.html">Fonte</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Contato</h2>
+            <a href="#sec" id="btn">Início</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+
+            <h2>Feito por</h2>
+            <p>este trabalho foi feito somente pelo Gustavo Zatti de Oliveira 1.Periodo</p>
+            <br></br>
+            <br></br>
+            <br></br>
+            <h2>Uma nova experiência</h2>
+            <p>Então professor, eu quis misturar a ideia de um estilo de site chamado de "Scroll Parallax Effect" em que eu estava aprendendo a fazer e que eu acho uma ideia muito legal para aplicar em trabalhos htmls.</p>
+            <br></br>
+            <p>espero que tenha gostado do trabalho apresentado S2</p>
+            <br></br>
+            <br></br>
+            <br></br>
+            <h2>Entre em contato comigo:</h2>
+            <br></br>
+            <br></br>
+            <br></br>
+            <p>Via <a href="https://teams.microsoft.com/_?culture=pt-br&country=br#/conversations/48:notes?ctx=chat">Teams</a>, <a href="https://wa.me/5541997155243">Whatsapp</a> e <a href="https://www.instagram.com/gustavozatti.png/">Instagram</a></p>
+
+      </div>
+      <script>
+          let stars = document.getElementById('stars');
+          let moon = document.getElementById('moon');
+          let mountains_behind = document.getElementById('mountains_behind');
+          let text = document.getElementById('text');
+          let btn = document.getElementById('btn');
+          let mountains_front = document.getElementById('mountains_front');
+          let header = document.querySelector('header');
+
+          window.addEventListener('scroll', function(){
+              let value = window.scrollY;
+              stars.style.left = value * 0.25 + 'px';
+              moon.style.top = value * 1.05 + 'px';
+              mountains_behind.style.top = value * 0.5 + 'px';
+              mountains_front.style.top = value * 0 + 'px';
+              text.style.marginRight = value * 4 + 'px';
+              text.style.marginTop = value * 1.5 + 'px';
+              btn.style.marginTop = value * 4 + 'px';
+              header.style.top = value * 0.5 + 'px';
+          })
+      </script>
+  </body>
+</html>

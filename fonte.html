@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zatti | TABELA</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Zatti</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tabela.html">Tabela</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="fonte.html" class="active">Fonte</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Fontes</h2>
+            <a href="#sec" id="btn">Início</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            
+            <h2>Fontes</h2>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <h2> <a href="https://brainly.com.br/tarefa/51881306#:~:text=Do%20que%20se%20trata%20a,vigência%20em%20agosto%20de%202020.">Do que se trata a LGPD?</a> </h2>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <h2> <a href="https://www.meioemensagem.com.br/proxxima/lgpd?gclid=CjwKCAjwuqiiBhBtEiwATgvixGMft7GA3so9Lgm537FRXiofm2xa5x63Ocn-gP0FNvfkTNTuCO288hoCR28QAvD_BwE">O que é a LGPD? <br></br><br></br>Quais são os objetivos da LGPD? <br></br><br></br> Quem fiscaliza o cumprimento da LGPD?</a></h2>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <h2> <a href="https://www.xpositum.com.br/ciclo-de-vida-dos-dados-e-lgpd">Tabela Ciclo de Vida dos Dados</a></h2>
+            <br></br>
+            <br></br>
+
+      </div>
+      <script>
+          let stars = document.getElementById('stars');
+          let moon = document.getElementById('moon');
+          let mountains_behind = document.getElementById('mountains_behind');
+          let text = document.getElementById('text');
+          let btn = document.getElementById('btn');
+          let mountains_front = document.getElementById('mountains_front');
+          let header = document.querySelector('header');
+
+          window.addEventListener('scroll', function(){
+              let value = window.scrollY;
+              stars.style.left = value * 0.25 + 'px';
+              moon.style.top = value * 1.05 + 'px';
+              mountains_behind.style.top = value * 0.5 + 'px';
+              mountains_front.style.top = value * 0 + 'px';
+              text.style.marginRight = value * 4 + 'px';
+              text.style.marginTop = value * 1.5 + 'px';
+              btn.style.marginTop = value * 4 + 'px';
+              header.style.top = value * 0.5 + 'px';
+          })
+      </script>
+  </body>
+</html>

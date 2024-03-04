@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zatti | TABELA</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Zatti</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tabela.html" class="active">Tabela</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="fonte.html">Fonte</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Tabela</h2>
+            <a href="#sec" id="btn">Início</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <table bgcolor="black" width="1650">
+                <tr bgcolor="white">
+                    <th width="">CICLO DE VIDA DOS DADOS</th>
+            <table bgcolor="black" width="1650">
+                <tr bgcolor="grey">
+                    <th width="200">FASE DO CICLO</th>
+                    <th width="">ANTES DA LGPD</th>
+                    <th width="">COM A LGPD</th>
+                </tr>
+                <tr bgcolor="lightgrey" align="center">
+                    <td>Coleta</td>
+                    <td>Os dados pessoais são coletados indiscriminadamente.</td>
+                    <td>Os dados pessoais coletados devem obedecer ao princípio da necessidade da finalidade.</td>
+                    </tr>
+                <tr bgcolor="lightgrey" align="center">
+                        <td>Processamento</td>
+                        <td>Os dados podem ser processados sem um tratamento específico.</td>
+                        <td>O processamento de dados só poderá ser realizado se o tratamento estiver enquadrado no Art.7 da LGPD.</td>
+                    </tr>
+                <tr bgcolor="lightgrey" align="center">
+                    <td>Análise</td>
+                    <td>A análise de dados é feita para entender o mercado, conhecer o perfil das pessoas e definir estratégias para oferecer bens e serviços para o público-alvo</td>
+                    <td>A análise de dados deve levar em consideração a finalidade de coleta. Devem ser obedecidos os princípios de tratamento, com propósito legítimo, específico e explicito.</td>
+                </tr>
+                <tr bgcolor="lightgrey" align="center">
+                    <td>compartilhamento</td>
+                    <td>Os dados pessoais são compartilhados sem a necessidade do consentimento de seus titulares.</td>
+                    <td>O compartilhamento de dados deve ser consentido pelos seus titulares.</td>
+                </tr>
+                <tr bgcolor="lightgrey" align="center">
+                    <td>Armazenamento</td>
+                    <td>Os dados pessoais são armazenados e mantidos por tempo indeterminado.</td>
+                    <td>Os dados pessoais devem ser armazenados e mantidos por prazos definidos, ou seja, até que finalidade seja alcançada ou deixem de ser necessários ou pertinentes ao alcance de finalidade.</td>
+                    </tr>
+                <tr bgcolor="lightgrey" align="center">
+                        <td>Reutilização</td>
+                        <td>Os dados pessoais são reutilizados sem a necessidade de consentimento de seus titulares.</td>
+                        <td>Um novo consentimento deve ser solicitado sempre que houver mudança de finalidade</td>
+                    </tr>
+                <tr bgcolor="lightgrey" align="center">
+                    <td>Eliminação</td>
+                    <td>Os dados pessoais são mentidos sem a obrigatoriedade de serem eliminados.</td>
+                    <td>Os dados pessoais devem ser eliminados após o término de seu tratamento.</td>
+                </tr>
+            </table>
+
+
+      </div>
+      <script>
+          let stars = document.getElementById('stars');
+          let moon = document.getElementById('moon');
+          let mountains_behind = document.getElementById('mountains_behind');
+          let text = document.getElementById('text');
+          let btn = document.getElementById('btn');
+          let mountains_front = document.getElementById('mountains_front');
+          let header = document.querySelector('header');
+
+          window.addEventListener('scroll', function(){
+              let value = window.scrollY;
+              stars.style.left = value * 0.25 + 'px';
+              moon.style.top = value * 1.05 + 'px';
+              mountains_behind.style.top = value * 0.5 + 'px';
+              mountains_front.style.top = value * 0 + 'px';
+              text.style.marginRight = value * 4 + 'px';
+              text.style.marginTop = value * 1.5 + 'px';
+              btn.style.marginTop = value * 4 + 'px';
+              header.style.top = value * 0.5 + 'px';
+          })
+      </script>
+  </body>
+</html>
